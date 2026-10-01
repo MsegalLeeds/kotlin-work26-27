@@ -7,7 +7,7 @@ Write your program in `src/Main.kt`. It should
 * Check that three command line arguments have been supplied, terminating
   the program with a suitable error if this is not the case
 
-* Determine the rounded average of the three marks suppled on the command
+* Determine the rounded average of the three marks supplied on the command
   line (use `roundToInt()`, from `kotlin.math`, to help with this)
 
 * Determine a module grade from the rounded average, following these rules:

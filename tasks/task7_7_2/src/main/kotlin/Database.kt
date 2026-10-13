@@ -9,11 +9,16 @@ typealias Database = MutableMap<String,String>
 fun createDatabase() = mutableMapOf<String,String>()
 
 fun Database.load(filename: String) {
-    // Add code here to read names and numbers from the file
-    // and insert them as keys and values into the map
+    Path(filename).forEachLine { Line ->
+        val (name, number) = Line.split(",", limit = 2)
+        this[name.trim()] = number.trim()
+    }
 }
 
 fun Database.save(filename: String) {
-    // Add code here to write the keys and values of the map to
-    // the file, separated by a comma, one pairing per line
+    Path(filename).writer().use{ writer ->
+        for ((name,number) in this) {
+            writer.write("$name,$number\n")
+        }
+    }
 }

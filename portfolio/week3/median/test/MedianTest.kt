@@ -16,5 +16,19 @@ class MedianTest : FreeSpec({
         }
     }
 
-    // Write four more tests here
+    "Median with 1"{
+        median(listOf(5.0f)) shouldBe (5.0f plusOrMinus tolerance)
+    }
+
+    "Median with 2" {
+        median(listOf(5.0f, 3.0f)) shouldBe (4.0f plusOrMinus tolerance)
+    }
+
+    "Median with 3" {
+        median(listOf(5.0f, 3.0f, 4.0f)) shouldBe (4.0f plusOrMinus tolerance)
+    }
+
+    "Median with unsorted" {
+        median(listOf(5.0f, 3.0f, 4.0f, 6.0f)) shouldBe (4.5f plusOrMinus tolerance)
+    }
 })

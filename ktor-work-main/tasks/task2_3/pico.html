@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <meta name="author" content="Marc Segal">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Task 2.3</title>
+    <body><main class="container">
+    <!-- document content goes here -->
+    <form action="https://httpbin.io/dump/request" method="POST">
+        <label for="em">Enter your email:</label>
+        <input type="email" id="em" name="email">
+        <button>Submit</button>
+        <input type="date" name="date" id="date" />
+        <input type="color" name="color" id="color" />
+        <legend>Choose staff or student</legend>
+        <details class="dropdown">
+            <summary>
+                Select role
+            </summary>
+            <ul>
+                <li>
+                    <label>
+                        <input type="radio" name="role" value="staff" />
+                        Staff
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="role" value="student" />
+                        Student
+                    </label>
+                </li>
+            </ul>
+        </details>
+    </form>
+</main></body>

@@ -5,3 +5,4 @@ import java.awt.Graphics2D
 interface Drawable {
     fun draw(context: Graphics2D)
 }
+

@@ -1,0 +1,7 @@
+{# Task 4.9: error handling #}
+{% extends "base.peb" %}
+{% block title %}500 Internal Server Error{% endblock %}
+{% block main %}
+<h1>Server Error</h1>
+<p>{{ error.message }}</p>
+{% endblock %}

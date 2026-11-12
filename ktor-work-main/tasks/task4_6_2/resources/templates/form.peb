@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <title>Dice Roller</title>
+</head>
+<body>
+<main class="container">
+<h1>Dice Roller</h1>
+
+<form action="/roll" method="GET">
+  <label for="num_dice_field">
+    Number of Dice
+    <input type="number" value="1" min="1" name="num_dice" id="num_dice_field">
+  </label>
+
+  <label for="die_selector">
+    Die to Roll
+    <select name="die_sides">
+      <option value="4">d4</option>
+      <option selected value="6">d6</option>
+      <option value="8">d8</option>
+      <option value="10">d10</option>
+      <option value="12">d12</option>
+      <option value="20">d20</option>
+    </select>
+  </label>
+
+  <button>Roll Dice</button>
+</form>
+</main>
+
+<footer class="container">
+  <small><i>Task 4.6.2, Ktor Web Development Guide</i></small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{# Task 8.2.2: single-page applications #}
+<form hx-post="/" hx-target="#results" hx-swap="innerHTML">
+   <label for="num_dice_field">
+     Number of Dice
+     <input type="number" value="1" min="1" name="num_dice" id="num_dice_field">
+   </label>
+
+   <label for="die_selector">
+     Die to Roll
+     <select name="die_sides">
+       {# @pebvariable name="valid_sides" type="Set<Int>" #}{% for sides in valid_sides %}
+         <option {% if sides == 6 %}selected{% endif %} value="{{ sides }}">d{{ sides }}</option>
+       {% endfor %}
+     </select>
+   </label>
+
+   <button>Roll Dice</button>
+</form>

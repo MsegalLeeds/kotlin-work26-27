@@ -1,0 +1,16 @@
+{# Task 8.2.1: single-page applications #}
+{% extends "base.peb" %}
+{% block content %}
+<div class="grid">
+  <div>
+    <article id="form">
+      {% include "form.peb" %}
+    </article>
+  </div>
+  <div>
+    <article id="results">
+      {% include "results.peb" %}
+    </article>
+  </div>
+</div>
+{% endblock %}

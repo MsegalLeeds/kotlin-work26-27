@@ -1,0 +1,16 @@
+# Task 4.9: error handling
+
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: ApplicationKt
+  ktor: enabled
+
+dependencies:
+  - $ktor.server.config.yaml
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.pebble
+  - $ktor.server.statusPages
+  - $libs.logback.classic

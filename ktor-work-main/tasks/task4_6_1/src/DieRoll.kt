@@ -1,0 +1,14 @@
+// Task 4.6.1: Pebble templates
+
+import kotlinx.serialization.Serializable
+import kotlin.random.Random
+
+@Serializable
+class DieRoll(val sides: Int) {
+    val result: Int
+
+    init {
+        require(sides in setOf(4, 6, 8, 10, 12, 20)) { "Invalid sides" }
+        result = Random.nextInt(sides) + 1
+    }
+}

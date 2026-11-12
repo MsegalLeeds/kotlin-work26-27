@@ -1,0 +1,38 @@
+// Configuration for forms-based and session-based authentication
+
+import io.ktor.server.application.*
+import io.ktor.server.auth.*
+import io.ktor.server.pebble.respondTemplate
+import io.ktor.server.response.respondRedirect
+
+fun Application.configureAuthentication() {
+    install(Authentication) {
+        form("auth-form") {
+            userParamName = "username"
+            passwordParamName = "password"
+            validate { credentials ->
+                when (UserDatabase.check(credentials)) {
+                    true -> UserIdPrincipal(credentials.name)
+                    false -> null
+                }
+            }
+            challenge {
+                call.respondTemplate("login.peb", mapOf(
+                    "error" to "Invalid username or password!"
+                ))
+            }
+        }
+
+        session<UserSession>("auth-session") {
+            validate { session ->
+                when {
+                    session.username in UserDatabase -> session
+                    else -> null
+                }
+            }
+            challenge {
+                call.respondRedirect("/login")
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{# Task 4.9: error handling #}
+{% extends "base.peb" %}
+{% block title %}{{ status }}{% endblock %}
+{% block main %}
+<h1>Error</h1>
+<p>Status code: {{ status }}</p>
+<p>Sorry, the URL <code>{{ path }}</code> is not supported by this application.</p>
+{% endblock %}

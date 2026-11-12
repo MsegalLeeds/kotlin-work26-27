@@ -1,0 +1,19 @@
+product: jvm/app
+
+settings:
+  ktor: enabled
+  kotlin:
+    serialization: json
+  jvm:
+    mainClass: ApplicationKt
+
+dependencies:
+  - $ktor.server.config.yaml
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.pebble
+  - $ktor.server.auth
+  - $ktor.server.sessions
+  - $ktor.serialization.kotlinx.json
+  - $libs.password4j
+  - $libs.logback.classic: runtime-only

@@ -1,0 +1,16 @@
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: ApplicationKt
+  kotlin:
+    serialization: enabled
+  ktor: enabled
+
+dependencies:
+  - $ktor.serialization.kotlinx.json
+  - $ktor.server.config.yaml
+  - $ktor.server.contentNegotiation
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $libs.logback.classic

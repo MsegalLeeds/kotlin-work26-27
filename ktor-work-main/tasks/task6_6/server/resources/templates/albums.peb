@@ -1,0 +1,7 @@
+{# Task 6.6 #}
+{% extends "base.peb" %}
+{% block main %}
+<h1>Albums</h1>
+{# Write code here to display album details in a table #}
+{# Table columns should be artist name, album title, year of release #}
+{% endblock %}

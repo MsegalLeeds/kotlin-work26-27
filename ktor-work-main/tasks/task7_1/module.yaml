@@ -1,0 +1,5 @@
+product: jvm/app
+
+dependencies:
+  - $libs.password4j
+  - $libs.logback.classic: runtime-only

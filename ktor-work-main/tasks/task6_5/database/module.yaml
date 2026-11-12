@@ -1,0 +1,7 @@
+product:
+  type: lib
+  platforms: [jvm]
+
+dependencies:
+  - $libs.exposed.core
+  - $libs.exposed.jdbc

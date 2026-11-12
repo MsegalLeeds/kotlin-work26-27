@@ -1,0 +1,6 @@
+{# Task 6.6 #}
+{% extends "base.peb" %}
+{% block main %}
+<h1>Artists</h1>
+{# Write code here to display artist names as an unordered list #}
+{% endblock %}

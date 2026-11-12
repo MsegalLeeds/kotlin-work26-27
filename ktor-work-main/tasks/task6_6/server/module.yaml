@@ -1,0 +1,20 @@
+# Task 6.6
+
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: ApplicationKt
+  ktor: enabled
+
+dependencies:
+  - ../database
+  - $ktor.server.config.yaml
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.pebble
+  - $libs.exposed.core
+  - $libs.exposed.dao
+  - $libs.exposed.jdbc
+  - $libs.h2: runtime-only
+  - $libs.logback.classic: runtime-only

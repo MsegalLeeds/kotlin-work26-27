@@ -1,0 +1,19 @@
+# Task 4.6.1: Pebble templates
+
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: ApplicationKt
+  kotlin:
+    serialization: enabled
+  ktor: enabled
+
+dependencies:
+  - $ktor.serialization.kotlinx.json
+  - $ktor.server.config.yaml
+  - $ktor.server.contentNegotiation
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.pebble
+  - $libs.logback.classic

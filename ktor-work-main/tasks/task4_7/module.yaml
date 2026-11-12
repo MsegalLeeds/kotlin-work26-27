@@ -1,0 +1,15 @@
+# Task 4.7
+
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: ApplicationKt
+  ktor: enabled
+
+dependencies:
+  - $ktor.server.config.yaml
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.pebble
+  - $libs.logback.classic

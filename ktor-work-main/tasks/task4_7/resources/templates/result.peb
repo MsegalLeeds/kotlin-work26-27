@@ -1,0 +1,21 @@
+{# Task 4.7 #}
+{% extends "base.peb" %}
+{% block title %}Result{% endblock %}
+{% block main %}
+<h1>Result of Roll</h1>
+
+<section>
+  <p>You rolled <strong>{{ roll.name }}</strong></p>
+  {% if roll.numDice > 1 %}
+    <p>The die values are <strong>{{ roll.dieValues }}</strong></p>
+    <p>The total is <strong>{{ roll.total }}</strong></p>
+  {% else %}
+     <p>The result is <strong>{{ roll.total }}</strong></p>
+  {% endif %}
+</section>
+
+<section>
+  <a role="button" href="{{ reroll_uri }}">Repeat</a>
+  <a role="button" href="/">New Roll</a>
+</section>
+{% endblock %}

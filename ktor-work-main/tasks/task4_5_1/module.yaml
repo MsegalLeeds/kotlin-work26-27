@@ -1,0 +1,20 @@
+# Task 4.5.1: Ktor application testing
+
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: ApplicationKt
+  ktor: enabled
+
+dependencies:
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.config.yaml
+  - $libs.logback.classic
+
+test-dependencies:
+  - $ktor.server.testHost
+  - $libs.kotest.assertions.core
+  - $libs.kotest.framework
+  - $libs.kotest.runner: runtime-only

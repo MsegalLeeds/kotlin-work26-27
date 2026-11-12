@@ -1,0 +1,13 @@
+{# Task 6.6 #}
+{% extends "base.peb" %}
+{% block main %}
+<h1>Music Database</h1>
+
+<p>There are <strong>{{ num_artists }} artists</strong>
+and <strong>{{ num_albums }} albums</strong> in the database.</p>
+
+<ul>
+  <li><a href="/artists">View the artists</a></li>
+  <li><a href="/albums">View the albums</a></li>
+</ul>
+{% endblock %}

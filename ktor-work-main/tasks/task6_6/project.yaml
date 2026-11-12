@@ -1,0 +1,5 @@
+# Task 6.6
+
+modules:
+  - ./database
+  - ./server

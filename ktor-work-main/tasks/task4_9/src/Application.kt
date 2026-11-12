@@ -1,0 +1,13 @@
+// Task 4.9: error handling
+
+import io.ktor.server.application.Application
+
+fun Application.module() {
+    //configureErrorHandling()
+    configureTemplates()
+    configureRouting()
+}
+
+fun main(args: Array<String>) {
+    io.ktor.server.netty.EngineMain.main(args)
+}

@@ -1,0 +1,24 @@
+{# Task 8.2.2: single-page applications #}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fuchsia.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.min.js"
+    integrity="sha384-2OatzQy1H+Zd/IIrjr1TcuDGqLXeHhbooAyJY1KdQMKnr4LZ22k31GBLdYKHmVjg"
+    crossorigin="anonymous"></script>
+  <title>{% block title %}Dice Roller{% endblock %}</title>
+</head>
+<body>
+<main class="container">
+<h1>Dice Roller</h1>
+{% block content %}{% endblock %}
+</main>
+
+<footer class="container">
+  <small><i>Task 8.2.2, Ktor Web Development Guide</i></small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+product: jvm/app
+
+dependencies:
+  - ../database
+  - $libs.exposed.core
+  - $libs.exposed.jdbc
+  - $libs.h2: runtime-only
+  - $libs.logback.classic: runtime-only

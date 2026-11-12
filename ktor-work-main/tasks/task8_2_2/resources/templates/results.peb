@@ -1,0 +1,10 @@
+{# Task 8.2.2: single-page applications #}
+{# @pebvariable name="roll" type="DiceRoll" #}
+<header><strong>Last Roll: {{ roll.name }}</strong></header>
+
+<p>You rolled: <strong>
+{% for value in roll.dieValues %}{% if loop.index > 0 %}, {% endif %}{{ value }}{% endfor %}</strong></p>
+
+{% if roll.numDice > 1 %}
+  <p>For a total of <strong>{{  roll.total }}</strong></p>
+{% endif %}

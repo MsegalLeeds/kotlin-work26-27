@@ -1,0 +1,14 @@
+# Task 8.1.1: generating HTML with a DSL
+
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: ApplicationKt
+  ktor: enabled
+
+dependencies:
+  - $ktor.server.core
+  - $ktor.server.netty
+  - $ktor.server.config.yaml
+  - $libs.logback.classic

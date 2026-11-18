@@ -3,7 +3,7 @@
 {% block main %}
 <h1>Dice Roller</h1>
 
-<form action="/roll" method="GET">
+<form action="/roll" method="POST">
   <label for="num_dice_field">
     Number of Dice
     <input type="number" value="1" min="1" name="num_dice" id="num_dice_field">
@@ -11,7 +11,7 @@
 
   <label for="die_selector">
     Die to Roll
-    <select name="die_sides">
+    <select name="die_sides" id="die_selector">
       <option value="4">d4</option>
       <option selected value="6">d6</option>
       <option value="8">d8</option>

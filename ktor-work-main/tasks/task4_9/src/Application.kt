@@ -3,7 +3,7 @@
 import io.ktor.server.application.Application
 
 fun Application.module() {
-    //configureErrorHandling()
+    configureErrorHandling()
     configureTemplates()
     configureRouting()
 }

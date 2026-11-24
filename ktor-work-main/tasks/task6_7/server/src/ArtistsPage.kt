@@ -9,6 +9,8 @@ suspend fun RoutingCall.artistsPage() {
         // Write code here that acquires details of all the artists,
         // sorted by name, and then passes these details in a map
         // to respondTemplate()
-        respondTemplate("artists.peb", emptyMap())
+        val artists = Artist.all().sortedBy { it.name }
+        respondTemplate("artists.peb", mapOf("artists" to artists))
+
     }
 }

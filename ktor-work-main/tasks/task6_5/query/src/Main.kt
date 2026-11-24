@@ -18,9 +18,24 @@ fun main() {
     println("Number of albums: $numAlbums")
 
     transaction {
-        // Find & display all the bands in the database
+        // Find & display all the bands
+        ArtistTable.selectAll()
+            .where { ArtistTable.isSolo eq false }
+            .forEach { row ->
+                println(row[ArtistTable.artistName])
+            }
 
-        // Find & display details of all albums recorded after a specific year
+        // Find & display albums recorded after 1970
+        val cutoffYear = 1970
 
+        (AlbumTable innerJoin ArtistTable)
+            .selectAll()
+            .where { AlbumTable.year greater cutoffYear }
+            .forEach { row ->
+                val artist = row[ArtistTable.artistName]
+                val title = row[AlbumTable.title]
+                val year = row[AlbumTable.year]
+                println("$artist - $title ($year)")
+            }
     }
 }

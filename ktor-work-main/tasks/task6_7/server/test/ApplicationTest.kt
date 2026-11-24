@@ -49,4 +49,23 @@ class ApplicationTest : FreeSpec({
             li[1].text() shouldBe "Doe, John"
         }
     }
+    "Albums page lists albums sorted by artist and year" {
+        testApplication {
+            application { testModule() }
+            val response = client.get("/albums")
+            val html = Jsoup.parse(response.bodyAsText())
+
+            html.select("body h1").eachText() shouldBe listOf("Albums")
+
+            val table = html.select("body table").single()
+            table.select("th").size shouldBe 3
+
+            val rows = table.select("tr").filter { it.select("td").isNotEmpty() }
+            rows.map { it.select("td").eachText() } shouldBe listOf(
+                listOf("A Band", "An Album", "2025"),
+                listOf("Doe, John", "First Album", "2015"),
+                listOf("Doe, John", "Second Album", "2023")
+            )
+        }
+    }
 })

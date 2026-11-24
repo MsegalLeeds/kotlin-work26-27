@@ -12,3 +12,4 @@ dependencies:
   - $ktor.server.netty
   - $ktor.server.config.yaml
   - $libs.logback.classic
+  - $ktor.server.htmlBuilder
